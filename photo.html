@@ -62,7 +62,9 @@
 					 <div class="swiper-slide">Slide 10</div>
 			 </div>
 			 <!-- Add Pagination -->
-			 <div class="swiper-pagination"></div>
+			 <div class="swiper-button-next"></div>
+		 	<div class="swiper-button-prev"></div>
+
 	 </div>
 </main>
 
@@ -78,16 +80,19 @@
 
 		<!-- Initialize Swiper -->
 		<script>
-				var swiper = new Swiper('.swiper-container', {
-						direction: 'vertical',
-						slidesPerView: 1,
-						spaceBetween: 30,
-						mousewheel: true,
-						pagination: {
-								el: '.swiper-pagination',
-								clickable: true,
-						},
-				});
+		var swiper = new Swiper('.swiper-container', {
+		loop: true,
+		speed: 900,
+    spaceBetween: 100,
+		fadeEffect: {
+    crossFade: true
+  		},
+		 navigation: {
+			 nextEl: '.swiper-button-next',
+			 prevEl: '.swiper-button-prev',
+
+		 },
+	 });
 		</script>
 
 	</body>
