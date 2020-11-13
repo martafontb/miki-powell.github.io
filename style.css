@@ -1,9 +1,9 @@
       * {
-            --headerFontSize: 1.4rem;
+            --headerFontSize: 1.5rem;
             --headerPadding: 0.5rem;
-            --navFontSize: 1rem;
+            --navFontSize: 1.2rem;
             --navPadding:0.5rem;
-            --footerFontSize: 1rem;
+            --footerFontSize: 1.2rem;
             --footerPadding: 0.5rem;
         }
 
@@ -14,14 +14,14 @@
           --highlight-color: #B3C4DE;
         }
 
-        body.dark-mode {
+        /* body.dark-mode {
           --main-color: #000000;
           --text-color: #ffffff;
           --highlight-color: #ff4141;
-        }
+        } */
 
         body {
-        	font-family: 'IBM Plex Sans', sans-serif;
+        	font-family: 'Cormorant Garamond', sans-serif;
         	font-size: 20px;
           font-weight: 300;
         	line-height: 40px;
