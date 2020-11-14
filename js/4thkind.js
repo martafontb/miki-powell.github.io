@@ -11,9 +11,7 @@ barba.init({
   transitions: [
     {
       name: "fade",
-      once() {
-
-      },
+      once() {},
       beforeEnter({ current, next, trigger }) {
         const href = next.url.path
         const headerLinks = document.querySelectorAll("header a")
@@ -52,8 +50,6 @@ barba.init({
     }
   }]
 });
-
-
 
 
 const mqDark = window.matchMedia("(prefers-color-scheme: dark)")
