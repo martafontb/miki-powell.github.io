@@ -111,12 +111,9 @@
         text-decoration: none;
       }
 
-      a:hover, a.selected {
-        border-bottom-color: var(--nav-underline-hover);
-        color: var(--highlight-color);
-      }
-
+      a:hover,
       a.selected {
+        border-bottom-color: var(--nav-underline-hover);
         color: var(--highlight-color);
       }
 
@@ -132,6 +129,8 @@
 
 
 /* pages */
+
+
 
 ul {
   text-transform: capitalize;
@@ -306,17 +305,13 @@ a.menu-toggle{
     background-position: 80% 5%;
   }
 
-section.photo {
+section.photo,
+section.contact {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-section.contact {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
 .contact div {
   width: 80%;
