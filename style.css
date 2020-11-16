@@ -133,7 +133,7 @@
 
 
 ul {
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
   list-style: none;
   text-align: left;
   padding: 1.4rem 1rem ;

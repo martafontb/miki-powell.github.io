@@ -1,4 +1,3 @@
-
 //Barba transitions
 const photoPage = document.querySelector('section.photo')
 const contactPage = document.querySelector('section.contact')
@@ -50,6 +49,23 @@ barba.init({
     }
   }]
 });
+
+barba.hooks.afterEnter( ( data ) => {
+  var swiper = new Swiper('.swiper-container', {
+      loop: true,
+      speed: 900,
+      spaceBetween: 100,
+      fadeEffect: {
+      crossFade: true
+      },
+
+      navigation: {
+       nextEl: '.swiper-button-next',
+       prevEl: '.swiper-button-prev',
+    },
+  });
+  // JS functions here
+} );
 
 
 const mqDark = window.matchMedia("(prefers-color-scheme: dark)")
