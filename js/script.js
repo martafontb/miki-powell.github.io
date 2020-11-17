@@ -33,6 +33,26 @@ barba.init({
 
   views: [{
     namespace: 'photo',
+    afterEnter(data) {
+        if (data.current.url.href != data.next.url.href) {
+            // do stuff when navigating to this view
+            var swiper = new Swiper('.swiper-container', {
+                loop: true,
+                speed: 900,
+                spaceBetween: 100,
+                fadeEffect: {
+                crossFade: true
+                },
+
+                navigation: {
+                 nextEl: '.swiper-button-next',
+                 prevEl: '.swiper-button-prev',
+              },
+            });
+        } else {
+            // do stuff when directly accessed
+        }
+    },
     beforeEnter() {
       photoPage.classList.add("photo")
     },
@@ -47,7 +67,8 @@ barba.init({
     beforeLeave(){
       contactPage.classList.remove("contact")
     }
-  }]
+  }
+]
 });
 
 barba.hooks.afterEnter( ( data ) => {

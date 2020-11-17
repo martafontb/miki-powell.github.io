@@ -107,13 +107,13 @@
         font-size: var(--navFontSize);
         text-decoration: none;
         transition: color var(--timing) var(--bezier);
-        padding-left: var(--headerPadding);
+        padding: var(--headerPadding);
         text-decoration: none;
       }
 
       a:hover,
       a.selected {
-        border-bottom: 1px solid var(--nav-underline-hover);
+
         color: var(--highlight-color);
       }
 
