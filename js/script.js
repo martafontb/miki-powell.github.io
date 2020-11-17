@@ -51,6 +51,7 @@ barba.init({
 });
 
 barba.hooks.afterEnter( ( data ) => {
+  // JS functions here
   var swiper = new Swiper('.swiper-container', {
       loop: true,
       speed: 900,
@@ -64,7 +65,7 @@ barba.hooks.afterEnter( ( data ) => {
        prevEl: '.swiper-button-prev',
     },
   });
-  // JS functions here
+
 } );
 
 

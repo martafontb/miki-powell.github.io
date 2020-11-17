@@ -93,7 +93,7 @@
         }
 
         body.nav-open main {
-          transform: translate(-100px, 0);
+          transform: translate(-150px, 0);
         }
 
       h1 {
@@ -113,7 +113,7 @@
 
       a:hover,
       a.selected {
-        border-bottom-color: var(--nav-underline-hover);
+        border-bottom: 1px solid var(--nav-underline-hover);
         color: var(--highlight-color);
       }
 
@@ -258,7 +258,7 @@ a.menu-toggle{
     position: fixed;
     top: 0;
     right: 0;
-    height: 100%;
+    height: 100vh;
     width: 40%;
     background-color: var(--main-color);
     padding: 48px;
@@ -297,13 +297,10 @@ a.menu-toggle{
     flex: 1;
   }
 
+.full-img {
+object-position: 80% 5%;
+}
 
-
-
-#index {
-    background-size: cover;
-    background-position: 80% 5%;
-  }
 
 section.photo,
 section.contact {
@@ -328,6 +325,18 @@ div.series ul li {
   padding: 1em;
 }
 
+}
+
+@media (orientation: landscape) {
+  body {
+    flex-direction: row;
+  }
+}
+
+@media (orientation: portrait) {
+  body {
+    flex-direction: column;
+  }
 }
 
 
