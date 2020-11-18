@@ -20,7 +20,7 @@ $('.modal-close').on('click', function(){
   })
 
 // have the content for these pages
-const images = document.querySelectorAll(".photos a")
+const images = document.querySelectorAll("img")
 let pageNumber = 0
 const totalPages = pageNumber.length;
 
