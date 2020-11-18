@@ -19,42 +19,14 @@ $('.modal-close').on('click', function(){
   return false
   })
 
-
-
-  const slides = document.getElementsByClassName('carousel-item');
-  let slidePosition = 0;
-  const totalSlides = slides.length;
-
-  document.getElementById('carousel-button-next').addEventListener('click', moveToNextSlide);
-  document.getElementById('carousel-button-prev').addEventListener('click', moveToPrevSlide);
-
-  function moveToNextSlide() {
-      if (slidePosition === totalSlides - 1) {
-          slidePosition = 0;
-      } else {
-          slidePosition++;
-      }
-
-      slides[slidePosition].classList.add("carousel-item-visible");
-  }
-
-  function moveToPrevSlide() {
-
-  }
-
-
-
-
-
-
 // have the content for these pages
 const images = document.querySelectorAll(".photos a")
 let pageNumber = 0
 const totalPages = pageNumber.length;
 
 //pick the relevant tags
-const nextTag = document.querySelector(".next").addEventListener('click', next);
-const previousTag = document.querySelector(".prev").addEventListener('click', previous);
+const nextTag = document.querySelector(".next")
+const previousTag = document.querySelector(".prev")
 const outputTag = document.querySelector(".modal-content")
 
 
@@ -85,14 +57,14 @@ const updateSection = function(){
 }
 
 
-// nextTag.addEventListener("click", function() {
-// next()
-//
-// })
-//
-// previousTag.addEventListener("click", function() {
-//   previous()
-// })
+nextTag.addEventListener("click", function() {
+next()
+
+})
+
+previousTag.addEventListener("click", function() {
+  previous()
+})
 
 // when the user presses the key, check for arrow left or right
 // and do next or prev acordingly
