@@ -47,7 +47,7 @@ const previous = function(){
   pageNumber = pageNumber - 1
 
     if(pageNumber < 0){
-      pageNumber = pages.length -1
+      pageNumber = images.length -1
       }
   updateSection()
 }
