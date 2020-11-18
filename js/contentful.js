@@ -4,7 +4,7 @@ const accessToken = "RBJUGQqWzamvdQZVJSSTBq12rU_GuahAecA-WaIM7Ww"
 
 const url = `https://cdn.contentful.com/spaces/${spaceId}/environments/${environmentId}/entries?access_token=${accessToken}`
 
-const sectionTag = document.querySelector("section.photo")
+const sectionTag = document.querySelector("section.feed")
 
 console.log(url)
 
@@ -28,6 +28,10 @@ const grabData = function(){
         if(imageData) {
           imgUrl = imageData.fields.file.url
         }
+        
+            if (imageUrl.startsWith('//')) {
+            imageUrl = imageUrl.split('//').join('https://')
+          }
 
         item.fields.image = imgUrl
         return item.fields
@@ -44,16 +48,11 @@ grabData().then(data => {
 
   data.forEach(item => {
     sectionTag.innerHTML = sectionTag.innerHTML + `
-    <div class="swiper-container">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">${item.image}</div>
-            <div class="swiper-slide">${item.image}</div>
-            <div class="swiper-slide">${item.image}</div>
-            <div class="swiper-slide">Slide 8</div>
-            <div class="swiper-slide">Slide 9</div>
-            <div class="swiper-slide">Slide 10</div>
-        </div>
-    </div>
+    <section class="feed photos">
+    						<a href="img/p5.png">${item.image}</a>
+    						<a href="img/p6.png">${item.image}</a>
+    						<a href="img/p7.png">${item.image}</a>
+     </section>
     `
   })
 })

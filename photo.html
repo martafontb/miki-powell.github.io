@@ -9,7 +9,13 @@
 		<link rel="stylesheet" href="_base.css">
 		<link rel="stylesheet" href="_fonts.css">
 		<link rel="stylesheet" href="style.css">
-		<link rel="stylesheet" href="swiper-bundle.min.css">
+		<!-- jQuery 1.8 or later, 33 KB -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<!-- Fotorama from CDNJS, 19 KB -->
+<link  href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
+
 		<link rel="icon" type="image/png" href="img/icon.png">
 	</head>
 	<body>
@@ -30,74 +36,59 @@
 
 		<nav>
 			<div class="internal">
-				<a href="photo.html" class="selected">Photo</a>
-				<a href="video.html">Video</a>
-				<a href="contact.html">Contact</a>
+				<a href="/photo.html" class="selected">Photo</a>
+				<a href="/video.html">Video</a>
+				<a href="/contact.html">Contact</a>
 			</div>
 		</nav>
 
 </header>
 
 <main data-barba="wrapper">
-<section data-barba="container" data-barba-namespace="photo" class="photo">
-<div class="series">
-	<ul>
-	<li><a href="doble.html">doble </a></li>
-	<li><a href="water.html">water </a></li>
-	<li><a href="sillas.html">sillas </a></li>
-	<li><a href="around.html">around </a></li>
-	</ul>
-</div>
-<!-- Swiper -->
-	 <div class="swiper-container">
-			 <div class="swiper-wrapper">
-					 <div class="swiper-slide"><img src="img/p1.png"/></div>
-					 <div class="swiper-slide"><img src="img/p2.png"/></div>
-					 <div class="swiper-slide"><img src="img/p3.png"/></div>
-					 <div class="swiper-slide"><img src="img/p4.png"/></div>
-					 <div class="swiper-slide">Slide 5</div>
-					 <div class="swiper-slide">Slide 6</div>
-					 <div class="swiper-slide">Slide 7</div>
-					 <div class="swiper-slide">Slide 8</div>
-					 <div class="swiper-slide">Slide 9</div>
-					 <div class="swiper-slide">Slide 10</div>
-			 </div>
-			 <!-- Add Pagination -->
-			 <div class="swiper-button-next"></div>
-		 	<div class="swiper-button-prev"></div>
-	 <!-- </div> -->
+<section class="feed photos">
+						<a href="img/p5.png"><img src="img/p5.png"/></a>
+						<a href="img/p6.png"><img src="img/p6.png"/></a>
+						<a href="img/p7.png"><img src="img/p7.png"/></a>
  </section>
-</main>
+
+ <div class="modal">
+	 <div class="modal-background">
+		 <button class="slideshow__btn slideshow__btn--dec prev" aria-label="Previous image">
+			 <div class="slideshow__arrow dn l:db">
+				 <svg class="db" viewBox="0 0 34 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+					 <path fill-rule="evenodd" clip-rule="evenodd" d="M11.741 0C11.2726 1.3445 10.1765 2.6168 8.51307 3.66418C6.35912 5.02037 3.36594 5.91318 -5.34058e-05 5.99401V6.00572V6.99428V7.00599C3.36593 7.08682 6.35912 7.97963 8.51307 9.33582C10.1765 10.3832 11.2726 11.6555 11.741 13H12.7904C12.0546 10.3981 9.4386 8.20578 5.85852 7H33.5V6H5.85853C9.4386 4.79422 12.0546 2.60194 12.7904 0H11.741Z" fill="black"></path>
+				 </svg>
+			 </div>
+		 </button>
+
+		 <button class="slideshow__btn slideshow__btn--inc next" aria-label="Next image">
+			 <div class="slideshow__arrow">
+				 <svg class="db" viewBox="0 0 34 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+					 <path fill-rule="evenodd" clip-rule="evenodd" d="M21.759 0C22.2273 1.3445 23.3234 2.6168 24.9869 3.66418C27.1408 5.02037 30.134 5.91318 33.5 5.99401L33.5 6V7L33.5 7.00599C30.134 7.08682 27.1408 7.97963 24.9869 9.33582C23.3234 10.3832 22.2273 11.6555 21.759 13H20.7095C21.4453 10.3981 24.0613 8.20578 27.6414 7H0V6H27.6414C24.0613 4.79422 21.4453 2.60194 20.7095 0H21.759Z" fill="black"></path>
+				 </svg>
+			 </div>
+		 </button>
+
+	 </div>
+	 <div class="modal-close">Close</div>
+
+	 <div class="modal-content">
+
+	 </div>
+ </div>
+ </main>
+
 
 <footer>
 	<a href="mailto:miki.opowell@gmail.com?subject=Hello%20there">miki.opowell@gmail.com</a>
 	<p>+34 672 13 77 48</p>
 </footer>
-
-		<script src="js/barba.js"></script>
-		<script src="js/barba-css.js"></script>
-		<!-- Swiper JS -->
-		<script src="js/swiper-bundle.min.js"></script>
-		<script>
-		var swiper = new Swiper('.swiper-container', {
-				loop: true,
-				speed: 900,
-				spaceBetween: 100,
-				fadeEffect: {
-				crossFade: true
-				},
-
-				navigation: {
-				 nextEl: '.swiper-button-next',
-				 prevEl: '.swiper-button-prev',
-			},
-		});
-		</script>
-		<!-- <script src="js/contentful.js"> </script> -->
-
+<!--
+		<script src="js/contentful.js"></script> -->
 		<script src="js/gsap.min.js"></script>
-
 		<script src="js/script.js"></script>
+		<script src="jquery.js"></script>
+		<script src="modal.js"></script>
 
 	</body>
 </html>
