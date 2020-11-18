@@ -53,7 +53,7 @@ const previous = function(){
 }
 
 const updateSection = function(){
-  outputTag.innerHTML = images[pageNumber]
+  outputTag.innerHTML = images[pageNumber].outerHTML
 }
 
 
