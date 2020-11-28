@@ -6,17 +6,13 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Miki Powell | photographer and videographer </title>
-		<link rel="stylesheet" href="_base.css">
-		<link rel="stylesheet" href="_fonts.css">
-		<link rel="stylesheet" href="style.css">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap" rel="stylesheet">
+		  <link rel="stylesheet" type="text/css" href="/stylesheets/site.css">
 		<!-- jQuery 1.8 or later, 33 KB -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
-<!-- Fotorama from CDNJS, 19 KB -->
-<link  href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
-
-		<link rel="icon" type="image/png" href="img/icon.png">
+		<link rel="icon" type="image/png" href="images/icon.png">
 	</head>
 	<body>
 <header>
@@ -45,11 +41,13 @@
 </header>
 
 <main data-barba="wrapper">
-<section class="feed photos">
-						<a href="img/p5.png"><img src="img/p5.png"/></a>
-						<a href="img/p6.png"><img src="img/p6.png"/></a>
-						<a href="img/p7.png"><img src="img/p7.png"/></a>
+
+<section class="feed photos fade">
+{{#section posts label="Photos" multiple=true sortable=true}}
+						<a href="images/p5.png"><img src="{{photo type=image width=800 tag=false alt="image1"}}" media="(min-width: 480px)" loading="lazy"/></a>
+{{/section}}
  </section>
+
 
  <div class="modal">
 	 <div class="modal-background">
@@ -85,10 +83,10 @@
 </footer>
 <!--
 		<script src="js/contentful.js"></script> -->
-		<script src="js/gsap.min.js"></script>
-		<script src="js/script.js"></script>
-		<script src="jquery.js"></script>
-		<script src="modal.js"></script>
+		<script src="javascripts/gsap.min.js"></script>
+		<script src="javascripts/script.js"></script>
+		<script src="javascripts/jquery.js"></script>
+		<script src="javascripts/modal.js"></script>
 
 	</body>
 </html>

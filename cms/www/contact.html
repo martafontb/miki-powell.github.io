@@ -6,10 +6,10 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Miki Powell | photographer and videographer </title>
-		<link rel="stylesheet" href="_base.css">
-		<link rel="stylesheet" href="_fonts.css">
-		<link rel="stylesheet" href="style.css">
-		<link rel="icon" type="image/png" href="img/icon.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/site.css">
+		<link rel="icon" type="image/png" href="images/icon.png">
 	</head>
 	<body>
 <header>
@@ -29,27 +29,33 @@
 		<nav>
 			<div class="internal">
 				<a href="/photo.html">Photo</a>
-				<a href="/video.html" class="selected">Video</a>
-				<a href="/contact.html">Contact</a>
+				<a href="/video.html">Video</a>
+				<a href="/contact.html" class="selected">Contact</a>
 			</div>
 		</nav>
-
 </header>
 
 
-
-<main id="video" data-barba="wrapper">
-	<div class="vid" data-barba="container">
-		<iframe title="mulatu" src="https://player.vimeo.com/video/392609212?portrait=0" frameborder="0" allow="autoplay; fullscreen" allowfullscreen="" samesite="None" secure="true" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;"></iframe>
-	</div>
-</main>
+<main>{{#section contact}}
+<section data-barba="container" data-barba-namespace="contact" class="contact">
+<div class="contact-details">
+<ul>
+<li><a href="tel:672137748">+34 672137748</a></li>
+<li><a href="mailto:miki.opowell@gmail.com?subject=Hello%20there">miki@mikipowell.com</a></li>
+<li><a href="https://www.instagram.com/c4l4m4r/">@c4l4m4r</a></li>
+</ul>
+</div>
+<div class="img">
+		<img src={{photo type=image tag=false alt="hero"}} class="animate"/>
+</div>
+</section>
+</main>{{/section}}
 
 <footer>
 	<a href="mailto:miki.opowell@gmail.com?subject=Hello%20there">miki.opowell@gmail.com</a>
 	<p>+34 672 13 77 48</p>
 </footer>
-		<script src="js/gsap.min.js"></script>
-		<script src="js/script.js"></script>
-
+		<script src="javascripts/gsap.min.js"></script>
+		<script src="javascripts/script.js"></script>
 	</body>
 </html>
