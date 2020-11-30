@@ -7,7 +7,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Miki Powell | photographer and videographer </title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/stylesheets/site.css">
 		<link rel="icon" type="image/png" href="images/icon.png">
 	</head>
@@ -38,15 +38,20 @@
 
 <main>{{#section contact}}
 <section data-barba="container" data-barba-namespace="contact" class="contact">
+
 <div class="contact-details">
-<ul>
-<li><a href="tel:672137748">+34 672137748</a></li>
-<li><a href="mailto:miki.opowell@gmail.com?subject=Hello%20there">miki@mikipowell.com</a></li>
-<li><a href="https://www.instagram.com/c4l4m4r/">@c4l4m4r</a></li>
-</ul>
+  <ul>
+    {{#section details multiple=false}}
+        <li><a href="tel:672137748">{{number}}</a></li>
+        <li><a href="{{_permalink}}">{{email}}</a></li>
+        <li><a href="https://www.instagram.com/c4l4m4r/">{{insta}}</a></li>
+    {{/section}}
+  </ul>
 </div>
+
+
 <div class="img">
-		<img src={{photo type=image tag=false alt="hero"}} class="animate"/>
+		<img src={{photo type=image tag=false alt="flower"}} class="animate"/>
 </div>
 </section>
 </main>{{/section}}
